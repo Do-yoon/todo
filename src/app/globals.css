@@ -32,12 +32,13 @@ body {
   }
 }
 
-.nav div {
+.nav button {
   width: 100%;
 }
 
 .nav span {
   left: 20%;
+  float: left;
 }
 
 .nav #inbox-number {
@@ -46,6 +47,6 @@ body {
   width: fit-content;
 }
 
-.search {
+.search input {
   width: 100%;
 }
