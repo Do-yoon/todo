@@ -31,3 +31,21 @@ body {
     text-wrap: balance;
   }
 }
+
+.nav div {
+  width: 100%;
+}
+
+.nav span {
+  left: 20%;
+}
+
+.nav #inbox-number {
+  float: right;
+  right: 10%;
+  width: fit-content;
+}
+
+.search {
+  width: 100%;
+}
