@@ -1,37 +1,36 @@
 'use client'
 
 import Image from "next/image";
-import {url} from "../util/static"
+import {url} from "../../util/static"
+import { useRouter } from "next/router";
 
-function onClickNav(e, _id) {
-  e.preventDefault();
-  window.location=`${url}/${_id}`
-}
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="flex flex-col justify-between p-10">
       <div className="search">
         <input type="text" placeholder="Search"></input>
       </div>
       <div className="nav">
-        <button onClick={(e)=>onClickNav(e, "inbox")}>
+        <button onClick={()=>router.push("inbox")}>
           <span>Inbox</span>
           <span id="inbox-number">0</span>
         </button>
-        <button onClick={(e)=>onClickNav(e, "inbox")}>
+        <button onClick={()=>router.push("calendar")}>
           <span>Calendar</span>
         </button>
-        <button onClick={(e)=>onClickNav(e, "calendar")}>
+        <button onClick={()=>router.push("upcoming")}>
           <span>Upcoming</span>
         </button>
-        <button onClick={(e)=>onClickNav(e, "upcoming")}>
+        <button onClick={()=>router.push("anytime")}>
           <span>Anytime</span>
         </button>
-        <button onClick={(e)=>onClickNav(e, "anytime")}>
+        <button onClick={()=>router.push("someday")}>
           <span>Someday</span>
         </button>
-        <button onClick={(e)=>onClickNav(e, "logbook")}>
+        <button onClick={()=>router.push("logbook")}>
           <span>Logbook</span>
         </button>
       </div>
