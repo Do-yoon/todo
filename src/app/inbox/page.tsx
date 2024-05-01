@@ -1,6 +1,4 @@
-function addTask() {
-
-}
+import AddTaskButton from "../components/AddTaskButton";
 
 export default function Inbox() {
   return (
@@ -8,7 +6,7 @@ export default function Inbox() {
       <h1>Inbox</h1>
       <ul>
       </ul>
-      <button onClick={()=>addTask()}>+</button>
+      <AddTaskButton/>
     </>
   )
 }
