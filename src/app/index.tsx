@@ -1,12 +1,13 @@
 'use client'
 
 import Image from "next/image";
-import {url} from "../../util/static"
+import {url} from "../util/static"
 import { useRouter } from "next/router";
-
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
+  const [inboxCount, setInboxCount] = useState(0);
 
   return (
     <main className="flex flex-col justify-between p-10">
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="nav">
         <button onClick={()=>router.push("inbox")}>
           <span>Inbox</span>
-          <span id="inbox-number">0</span>
+          <span id="inbox-number">{inboxCount}</span>
         </button>
         <button onClick={()=>router.push("calendar")}>
           <span>Calendar</span>
